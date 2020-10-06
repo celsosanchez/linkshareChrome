@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>{{ defaultText }}</p>
+    <p>{{str()}}</p>
   </div>
 </template>
 
@@ -13,6 +13,11 @@ export default {
   computed: {
     defaultText () {
       return browser.i18n.getMessage('extName')
+    }
+  },
+  methods: {
+    str: function(){
+      return "asdd";
     }
   }
 }
