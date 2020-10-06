@@ -3,11 +3,30 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
+      <Helloworld />
+      <Helloworld />
+      <p>asd</p>
+      <Form />
     </div>
     <router-view />
   </div>
 </template>
+<script>
+import Helloworld from "@/components/HelloWorld.vue";
+import Form from "@/components/Form.vue";
 
+export default {
+  componnents: {
+    Helloworld,
+    Form,
+  },
+  data() {
+    return {
+      tags: [],
+    };
+  },
+};
+</script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

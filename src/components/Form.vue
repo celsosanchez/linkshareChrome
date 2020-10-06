@@ -1,9 +1,10 @@
 <template>
   <div>
+    <p>{{ str() }}</p>
     <input-tags v-model="tags">
       <div
         class="tags-input"
-        slot-scope="{ tag, removeTag, inputEventHandlers, inputBindings }"
+        slot-scope="{ tags, removeTag, inputEventHandlers, inputBindings }"
       >
         <span :key="tag" v-for="tag in tags" class="tags-input-tag">
           <span>{{ tag }}</span>
@@ -23,7 +24,6 @@
         />
       </div>
     </input-tags>
-    <p>{{ msg }}</p>
   </div>
 </template>
 
@@ -33,13 +33,11 @@ import VueFormulate from "@braid/vue-formulate";
 import VueTags from "vue-tags";
 Vue.component("input-tags", VueTags);
 Vue.use(VueFormulate);
+
 export default {
-  name: "HelloWorld",
+  name: "Form",
   componnents: {
     VueTags,
-  },
-  props:{
-    msg: String
   },
   data() {
     return {
@@ -56,7 +54,7 @@ export default {
   },
   methods: {
     str: function () {
-      return "asdder";
+      return "asdd";
     },
   },
 };

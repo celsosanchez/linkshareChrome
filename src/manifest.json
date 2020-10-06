@@ -6,7 +6,7 @@
   "default_locale": "en",
   "permissions": [
     "<all_urls>",
-    "<activeTab>",
+    "activeTab",
     "*://*/*"
   ],
   "icons": {
